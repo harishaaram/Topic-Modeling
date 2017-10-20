@@ -17,11 +17,14 @@ def archive_links(url):
 
 
 def minutesText(url, fname):
-    htmls = urllib.urlopen(url).read()
-    soups = BeautifulSoup(htmls,"lxml")
-    div_summary = soups.findAll('td', {"width": 600})
-    clean = bleach.clean(div_summary, tags=[], strip=True)
-    saveFiles(clean, fname)
+    try:
+        htmls = urllib.urlopen(url).read()
+        soups = BeautifulSoup(htmls,"lxml")
+        div_summary = soups.findAll('td', {"width": 600})
+        clean = bleach.clean(div_summary, tags=[], strip=True)
+        saveFiles(clean, fname)
+    except:
+        pass
 
 def saveFiles(text, fname):
     os.getcwd()
@@ -35,8 +38,8 @@ def saveFiles(text, fname):
 
 def main():
     url = 'https://www.federalreserve.gov/monetarypolicy/fomchistorical'
-    startyear = 2000
-    while startyear < 2018:#looping through years of minutes data
+    startyear = 1993
+    while startyear <= 2007:#looping through years of minutes data
         print(startyear)
         archive_links(url + str(startyear) + '.htm')
         # break
