@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 import bleach
 
-def archive_links(url):
+def archive_links(url, startyear):
     print url
 
     html = urllib.urlopen(url).read()
@@ -13,23 +13,28 @@ def archive_links(url):
         document_name = str(i['href']).split('/')[3].split('.')[0] #for eg, if the href is '/fomc/minutes/20000202.htm', then 20000202 is doc name
         url_link = "https://www.federalreserve.gov" + str(i['href'])
         print url_link
-        minutesText(url_link, document_name)
+        minutesText(url_link, document_name,startyear)
 
 
-def minutesText(url, fname):
+def minutesText(url, fname, startyear):
     try:
         htmls = urllib.urlopen(url).read()
         soups = BeautifulSoup(htmls,"lxml")
         div_summary = soups.findAll('td', {"width": 600})
         clean = bleach.clean(div_summary, tags=[], strip=True)
-        saveFiles(clean, fname)
+        saveFiles(clean, fname, startyear)
     except:
         pass
 
-def saveFiles(text, fname):
+def saveFiles(text, fname, startyear):
     os.getcwd()
 
     os.chdir('/home/harish/PycharmProjects/Topic-Modeling/Data Extraction/dataset/')
+    directory = '/home/harish/PycharmProjects/Topic-Modeling/Data Extraction/dataset/'+str(startyear) + '/'
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+    os.chdir(directory)
 
     fileCreate= open(fname + '.txt', 'w')
     fileCreate.write(text)
@@ -41,7 +46,7 @@ def main():
     startyear = 1993
     while startyear <= 2007:#looping through years of minutes data
         print(startyear)
-        archive_links(url + str(startyear) + '.htm')
+        archive_links(url + str(startyear) + '.htm', startyear)
         # break
         startyear += 1
 
