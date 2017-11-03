@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+dataset/
+dataset.zip
+minutes.zip
+.idea/
+Data Extraction/minutes/
