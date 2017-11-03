@@ -51,8 +51,8 @@ def saveFiles(text, fname, startyear):
 
 def main():
     url = 'https://www.federalreserve.gov/monetarypolicy/fomchistorical'
-    startyear = 1995
-    while startyear <= 1996:#looping through years of minutes data
+    startyear = 1993
+    while startyear <= 2007:#looping through years of minutes data
         print(startyear)
         archive_links(url + str(startyear) + '.htm', startyear)
         # break
