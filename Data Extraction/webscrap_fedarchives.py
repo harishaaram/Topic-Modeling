@@ -1,5 +1,6 @@
 import urllib, os
 from bs4 import BeautifulSoup
+import re
 
 import bleach
 
@@ -10,10 +11,11 @@ def archive_links(url, startyear):
     soup = BeautifulSoup(html,"lxml")
     pp = soup.findAll('a', href= True, text='Minutes')
     for i in pp:
-        document_name = str(i['href']).split('/')[3].split('.')[0] #for eg, if the href is '/fomc/minutes/20000202.htm', then 20000202 is doc name
+        document_name = str(i['href']).split('/')[-1].split('.')[0] #for eg, if the href is '/fomc/minutes/20000202.htm', then 20000202 is doc name
         url_link = "https://www.federalreserve.gov" + str(i['href'])
-        print url_link
-        minutesText(url_link, document_name,startyear)
+        # print url_link
+        only_number_docname = re.sub("[^0-9]", "", document_name)
+        minutesText(url_link, only_number_docname,startyear)
 
 
 def minutesText(url, fname, startyear):
@@ -44,7 +46,7 @@ def saveFiles(text, fname, startyear):
 def main():
     url = 'https://www.federalreserve.gov/monetarypolicy/fomchistorical'
     startyear = 1993
-    while startyear <= 2007:#looping through years of minutes data
+    while startyear <= 1993:#looping through years of minutes data
         print(startyear)
         archive_links(url + str(startyear) + '.htm', startyear)
         # break
