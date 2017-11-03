@@ -13,8 +13,8 @@ def archive_links(url, startyear):
     for i in pp:
         document_name = str(i['href']).split('/')[-1].split('.')[0] #for eg, if the href is '/fomc/minutes/20000202.htm', then 20000202 is doc name
         url_link = "https://www.federalreserve.gov" + str(i['href'])
-        # print url_link
-        only_number_docname = re.sub("[^0-9]", "", document_name)
+        print url_link
+        only_number_docname = re.sub("[^0-9]", "", document_name)#only numbers
         minutesText(url_link, only_number_docname,startyear)
 
 
@@ -22,7 +22,13 @@ def minutesText(url, fname, startyear):
     try:
         htmls = urllib.urlopen(url).read()
         soups = BeautifulSoup(htmls,"lxml")
-        div_summary = soups.findAll('td', {"width": 600})
+
+        #the website is not designed in a standard format
+        if startyear > 1995:
+            div_summary = soups.findAll('td', {"width": 600})
+        else:
+            div_summary = soups.findAll('p', text=True)
+
         clean = bleach.clean(div_summary, tags=[], strip=True)
         saveFiles(clean, fname, startyear)
     except:
@@ -45,8 +51,8 @@ def saveFiles(text, fname, startyear):
 
 def main():
     url = 'https://www.federalreserve.gov/monetarypolicy/fomchistorical'
-    startyear = 1993
-    while startyear <= 1993:#looping through years of minutes data
+    startyear = 1995
+    while startyear <= 1996:#looping through years of minutes data
         print(startyear)
         archive_links(url + str(startyear) + '.htm', startyear)
         # break
