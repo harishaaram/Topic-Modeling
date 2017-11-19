@@ -53,10 +53,8 @@ library(topicmodels)
 setwd("/home/harish/PycharmProjects/Topic-Modeling/")
 
 ## BUILDING CORPUS
-#TODO:Change years - i am doing it for 2000
-i = 2006
-print(i)
-folder <-"/home/harish/PycharmProjects/Topic-Modeling/Data Extraction/dataset/1993_2017"
+
+folder <-"/home/harish/PycharmProjects/Topic-Modeling/Data Extraction/dataset/manual_93_2005"
 print(folder)
 # summary(folder_i)
 corpus_name <- paste("corpus_Year", i, sep="_");
