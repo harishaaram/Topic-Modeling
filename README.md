@@ -28,7 +28,7 @@ how ​ ​it ​ ​impacts ​ ​the ​ ​minutes.
 
 
 # Datasource:
-    1. [Archive fed minutes data](https://www.federalreserve.gov/monetarypolicy/fomc_historical_year.htm)
+  [Archive fed minutes data](https://www.federalreserve.gov/monetarypolicy/fomc_historical_year.htm)
 
 
 # Language:
@@ -44,9 +44,9 @@ how ​ ​it ​ ​impacts ​ ​the ​ ​minutes.
 5. Perform LDA to identify top terms of the topics/concepts.
 6. Create a LSA space to track whose words matter more to the outcome of the meetings.
 
-## [Have a peek at the working of CODE_ _ ](http://nbviewer.jupyter.org/github/harishaaram/Topic-Modeling/blob/master/Text_Analysis_Fedspeech.ipynb)
+#### [Have a peek at the working of CODE_ _ ](http://nbviewer.jupyter.org/github/harishaaram/Topic-Modeling/blob/master/Text_Analysis_Fedspeech.ipynb)
 
-![Research pdf](resource/AdvancedDataMining.pdf)
+![Link to Research Paper](resource/AdvancedDataMining.pdf)
 
 
 
