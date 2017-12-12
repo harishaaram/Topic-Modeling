@@ -1,6 +1,6 @@
 # Examination of Federal Reserve Meeting Minutes
-### 1. Understand the relative proportions of concepts through time - using Latent Dirichlet Allocation (LDA).
-### 2. Determine the influence of different policymakers on the minutes of meeting data - using Latent Semantic Analysis (LSA) .
+1. **Understand the relative proportions of concepts through time - using Latent Dirichlet Allocation (LDA).**
+2. **Determine the influence of different policymakers on the minutes of meeting data - using Latent Semantic Analysis (LSA).**
 
 ## Team:
     1. Harish Gandhi Ramachandran - Master's in computer science
@@ -28,12 +28,12 @@ how ​ ​it ​ ​impacts ​ ​the ​ ​minutes.
 
 
 # Datasource:
-  [Archive fed minutes data](https://www.federalreserve.gov/monetarypolicy/fomc_historical_year.htm)
+1. [Archive fed minutes data](https://www.federalreserve.gov/monetarypolicy/fomc_historical_year.htm)
 
 
 # Language:
-    1. **R** - *for analysis*
-    2. **Python 3** - *for data extraction from website*
+1. **R** - *for analysis*
+2. **Python 3** - *for data extraction from website*
 
 
 ## The Approach
@@ -46,7 +46,7 @@ how ​ ​it ​ ​impacts ​ ​the ​ ​minutes.
 
 #### [Have a peek at the working of CODE_ _ ](http://nbviewer.jupyter.org/github/harishaaram/Topic-Modeling/blob/master/Text_Analysis_Fedspeech.ipynb)
 
-![Link to Research Paper](resource/AdvancedDataMining.pdf)
+[Link to Research Paper](resource/AdvancedDataMining.pdf)
 
 
 
