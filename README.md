@@ -1,7 +1,10 @@
 # Examination of Federal Reserve Meeting Minutes
+### 1. Understand the relative proportions of concepts through time - using Latent Dirichlet Allocation (LDA).
+### 2. Determine the influence of different policymakers on the minutes of meeting data - using Latent Semantic Analysis (LSA) .
 
-    Understand the relative proportions of concepts through time - using Latent Dirichlet Allocation (LDA).
-    Determine the influence of different policymakers on the minutes of meeting data - using Latent Semantic Analysis (LSA) .
+## Team:
+    1. Harish Gandhi Ramachandran - Master's in computer science
+    2. Dan De-Rose Jr - Master's in Fiance
 
 # Key concepts:
 *Unsupervised learning, Topic-modeling, Text-analysis, Latent Dirichlet Allocation(LDA), Latent semantic analysis(LSA), Natural Language Processing(NLP)*
@@ -29,15 +32,9 @@ how ​ ​it ​ ​impacts ​ ​the ​ ​minutes.
 
 
 # Language:
-    1. R
-    2. Python 3
+    1. **R** - *for analysis*
+    2. **Python 3** - *for data extraction from website*
 
-## Considerations to keep in mind:
-1. 
-2. Data is extracted from the FRONT page of the above data sources.
-3. The article title and the summary are extracted.
-4. Data has been scrapped from the resources at the **same** time(since it gets updated regularly).
-5. Our assumption is there is no bias between choosing articles.
 
 ## The Approach
 1. Collect relevant text information from the articles.
@@ -47,9 +44,9 @@ how ​ ​it ​ ​impacts ​ ​the ​ ​minutes.
 5. Perform LDA to identify top terms of the topics/concepts.
 6. Create a LSA space to track whose words matter more to the outcome of the meetings.
 
-# Progress:
+## [Have a peek at the working of CODE_ _ ](http://nbviewer.jupyter.org/github/harishaaram/Topic-Modeling/blob/master/Text_Analysis_Fedspeech.ipynb)
 
-## 1) Data Extraction Phase:
+![Research pdf](resource/AdvancedDataMining.pdf)
 
 
 
