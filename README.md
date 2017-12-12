@@ -44,9 +44,11 @@ how ​ ​it ​ ​impacts ​ ​the ​ ​minutes.
 5. Perform LDA to identify top terms of the topics/concepts.
 6. Create a LSA space to track whose words matter more to the outcome of the meetings.
 
-#### [Link to the Walkthrough of the Solution](http://nbviewer.jupyter.org/github/harishaaram/Topic-Modeling/blob/master/Text_Analysis_Fedspeech.ipynb)
+# Detailed Work
 
-[Link to Research Paper](resource/AdvancedDataMining.pdf)
+1. [Walkthrough of the solution](http://nbviewer.jupyter.org/github/harishaaram/Topic-Modeling/blob/master/Text_Analysis_Fedspeech.ipynb)
+
+2. [Link to Research Paper](resource/AdvancedDataMining.pdf)
 
 
 
