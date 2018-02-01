@@ -1,13 +1,10 @@
 # Objective:
-1. Understand the relative proportions of concepts through time - using Latent Dirichlet Allocation (LDA).
-2. Determine the influence of different policymakers on the minutes of meeting data - using Latent Semantic Analysis (LSA).
+1. Analyze the changing topics of Federal Reserve minutes data over time(1993-2017).
+2. Determine the influence of different policymakers on the minutes of meeting data.
 
 # Team:
     1. Harish Gandhi Ramachandran - Master's in computer science
     2. Dan De-Rose Jr - Master's in Fiance
-
-# Key concepts:
-*Unsupervised learning, Topic-modeling, Text-analysis, Latent Dirichlet Allocation(LDA), Latent semantic analysis(LSA), Natural Language Processing(NLP)*
 
 
 # Problem
@@ -27,28 +24,32 @@ and text analysis of the meeting documents, which are called minutes. In additio
 how ​ ​it ​ ​impacts ​ ​the ​ ​minutes.
 
 
+# Key concepts:
+*Unsupervised learning, Topic-modeling, Text-analysis, Latent Dirichlet Allocation(LDA), Latent semantic analysis(LSA), Natural Language Processing(NLP)*
+
+
 # Datasource:
 1. [Archive fed minutes data](https://www.federalreserve.gov/monetarypolicy/fomc_historical_year.htm)
 
 
 # Language:
 1. **R** - *for analysis*
-2. **Python 3** - *for data extraction from website*
+2. **Python** - *for data extraction from website*
 
 
-# The Approach
+# Approach:
 1. Collect relevant text information from the articles.
 2. Build a text corpus and Document Term Matrix.
 3. Preprocess the data through removing stopwords, stemming etc.
-4. Perform optimal clustering using NbClust kmeans method, to get the optimum concepts.
+4. Perform optimal clustering using NbClust kmeans method, to get the optimum number of concepts.
 5. Perform LDA to identify top terms of the topics/concepts.
 6. Create a LSA space to track whose words matter more to the outcome of the meetings.
 
+
 # Detailed Work
-
 1. [Walkthrough of the solution](http://nbviewer.jupyter.org/github/harishaaram/Topic-Modeling/blob/master/Text_Analysis_Fedspeech.ipynb)
-
 2. [Link to Research Paper](resource/AdvancedDataMining.pdf)
+
 
 
 
